@@ -65,6 +65,7 @@ struct MapView: View {
                 return
             }
             locationTool.requestAuthorization()
+            region = MKCoordinateRegion(center: locationTool.locationManager.location!.coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
