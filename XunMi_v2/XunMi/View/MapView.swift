@@ -23,7 +23,7 @@ struct MapView: View {
     @AppStorage("uid") var uid: Int = -1
     
     var body: some View {
-        Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil, annotationItems: annotationPlace) { place in
+        Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: false, userTrackingMode: nil, annotationItems: annotationPlace) { place in
             MapAnnotation(coordinate: place.location) {
                 Button {
                     // 不支持区域监测
